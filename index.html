@@ -38,25 +38,13 @@
 
  
 
- 
-
- 
-
         //embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
         //embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
  
 
- 
-
- 
-
         //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
         //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
- 
-
- 
 
  
 
@@ -71,16 +59,8 @@
 
  
 
- 
-
- 
-
         embedded_svc.settings.enabledFeatures = ['LiveAgent'];
         embedded_svc.settings.entryFeature = 'LiveAgent';
-
- 
-
- 
 
  
 
@@ -99,25 +79,7 @@
                 isOfflineSupportEnabled: false
             }
         );
-        var orgOpen = window.open;
-        window.open = function (url, windowName, windowFeatures) {
-            /* Width of the chat window. Use your own value. */
-            var chatWindowHeight=468;
-            /* Height of the chat window. Use your own value. */
-            var chatWindowWidth=377;
-            /* Calculate the left position to keep the chatwindow in center */ 
-            var left = parseInt((screen.availWidth/2) - (chatWindowWidth/2));
-            /* Calculate the top position to keep the chatwindow in center */
-            var top = parseInt((screen.availHeight/2) - (chatWindowHeight/2));
-            /* Create the arguments for window.open method. */
-            var windowFeatures = "width=" + chatWindowWidth + ",height=" + chatWindowHeight + ",status,resizable,left=" + left + ",top=" + top + "screenX=" + left + ",screenY=" + top;
-            return orgOpen(url, windowName, windowFeatures); 
-        } 
- };
-
- 
-
- 
+    };
 
  
 
@@ -127,16 +89,12 @@
         s.onload = function() {
             initESW(null);
         };
-        //document.body.appendChild(s);
-        document.getElementById("container-1").insertAdjacentElement("beforebegin", s);
+        document.body.appendChild(s);
     } else {
         initESW('https://service.force.com');
     }
 </script>
 
-<div id="container-1">
-foo
-</div>
 
 </body>
 </html>
