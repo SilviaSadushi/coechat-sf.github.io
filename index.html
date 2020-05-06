@@ -127,12 +127,16 @@
         s.onload = function() {
             initESW(null);
         };
-        document.body.appendChild(s);
+        //document.body.appendChild(s);
+        document.getElementById("container-1").appendChild(s);
     } else {
         initESW('https://service.force.com');
     }
 </script>
 
+<div id="container-1">
+foo
+</div>
 
 </body>
 </html>
