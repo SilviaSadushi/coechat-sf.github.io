@@ -128,7 +128,7 @@
             initESW(null);
         };
         //document.body.appendChild(s);
-        document.getElementById("container-1").appendChild(s);
+        document.getElementById("container-1").insertAdjacentElement("beforebegin", s);
     } else {
         initESW('https://service.force.com');
     }
