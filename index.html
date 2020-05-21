@@ -55,10 +55,17 @@
  
 
         // Settings for Chat
-        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+        embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+		if (prechatFormData[7].value === "Deutsch"){
+			return "5731w0000008PAw";
+		}
+		else{
+			return "5731w0000008PB1";
+		}
+
             // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
             // Returns a valid button ID.
-        //};
+        };
         //embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
         //embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
         //embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
