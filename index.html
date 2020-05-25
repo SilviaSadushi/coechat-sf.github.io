@@ -56,6 +56,7 @@
 
         // Settings for Chat
 	embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+		console.log('#### value: ' + prechatFormData[4].value);
 		if (prechatFormData[4].value === "Deutsch"){return "5731w0000008PAw"};
 	};
 
