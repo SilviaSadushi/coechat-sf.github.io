@@ -8,14 +8,13 @@
 
 <style type='text/css'>
     .embeddedServiceHelpButton .helpButton .uiButton {
-        background-color: #bb0a30 !important;
+        background-color: #005290;
         font-family: "Arial", sans-serif;
     }
     .embeddedServiceHelpButton .helpButton .uiButton:focus {
-        outline: 1px solid #bb0a30 !important;
+        outline: 1px solid #005290;
     }
 </style>
-
 
 </head>
 
@@ -36,7 +35,7 @@
 	 
 	
 
-	<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
     var initESW = function(gslbBaseURL) {
         embedded_svc.settings.displayHelpButton = true; //Or false
@@ -52,12 +51,10 @@
         //embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
         //embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
 
-	    
-        // Settings for Chat
-	embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-		if (prechatFormData[5].value === "Deutsch"){return "5731w0000008PAw"};
-	};
+ 
 
+        // Settings for Chat
+        //embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
             // Dynamically changes the button ID based on what the visitor enters in the pre-chat form.
             // Returns a valid button ID.
         //};
@@ -73,17 +70,17 @@
  
 
         embedded_svc.init(
-            'https://vwg5-vwgroup--drcchat.my.salesforce.com',
-            'https://drcchat-vwg5-vwgroup.cs105.force.com/drcwholesale',
+            'https://vwg5-vwgroup--qa.my.salesforce.com',
+            'https://qa-vwg5-vwgroup.cs85.force.com/drcwholesale',
             gslbBaseURL,
-            '00D1w0000000YLf',
-            'AudiEN',
+            '00D6E0000004Yt8',
+            'DRC_Chat_Group',
             {
-                baseLiveAgentContentURL: 'https://c.la1-c1cs-fra.salesforceliveagent.com/content',
-                deploymentId: '5721w0000008OuT',
-                buttonId: '5731w0000008PB1',
-                baseLiveAgentURL: 'https://d.la1-c1cs-fra.salesforceliveagent.com/chat',
-                eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1w00000000StEAI_171e0dc5f15',
+                baseLiveAgentContentURL: 'https://c.la1-c1cs-par.salesforceliveagent.com/content',
+                deploymentId: '5726E0000004CTw',
+                buttonId: '5736E0000004DE9',
+                baseLiveAgentURL: 'https://d.la1-c1cs-par.salesforceliveagent.com/chat',
+                eswLiveAgentDevName: 'DRC_Chat_Group',
                 isOfflineSupportEnabled: false
             }
         );
@@ -93,7 +90,7 @@
 
     if (!window.embedded_svc) {
         var s = document.createElement('script');
-        s.setAttribute('src', 'https://vwg5-vwgroup--drcchat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+        s.setAttribute('src', 'https://vwg5-vwgroup--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
         s.onload = function() {
             initESW(null);
         };
