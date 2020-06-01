@@ -82,7 +82,7 @@ HELLLO2!
 		);
 	};
 
-	if (!window.embedded_svc) {
+	//if (!window.embedded_svc) {
 		console.log('@@@ in if');
 		var s = document.createElement('script');
 		console.log('@@@ s: ', s);
@@ -91,10 +91,10 @@ HELLLO2!
 			initESW(null);
 		};
 		document.body.appendChild(s);
-	} else {
-		console.log('@@@ in else');
-		initESW('https://service.force.com');
-	}
+	//} else {
+		//console.log('@@@ in else');
+		//initESW('https://service.force.com');
+	//}
 </script>
 	
 </body>
