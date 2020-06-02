@@ -64,6 +64,7 @@ HELLO!
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
+		
 
 		embedded_svc.init(
 			'https://vwg5-vwgroup--drcchat.my.salesforce.com',
@@ -80,6 +81,16 @@ HELLO!
 				isOfflineSupportEnabled: false
 			}
 		);
+		
+		embedded_svc.liveAgentAPI.startChat({
+			directToAgentRouting: {
+			buttonId: “5731w0000008PB1”,
+			// userId: “”,
+			fallback: true
+		},
+		extraPrechatInfo: [],
+		extraPrechatFormDetails: []
+		});
 	};
 
 	if (!window.embedded_svc) {
