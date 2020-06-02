@@ -41,9 +41,18 @@ HELLO!
 
 
 
-<script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+<script type='text/javascript' src='https://service.force.com/embeddedservice/4.1/esw.min.js'></script>
 <script type='text/javascript'>
 		var initESW = function(gslbBaseURL) {
+		/*embedded_svc.liveAgentAPI.startChat({
+			directToAgentRouting: {
+			buttonId: “5731w0000008PB1”,
+			// userId: “”,
+			fallback: true
+		},
+		extraPrechatInfo: [],
+		extraPrechatFormDetails: []
+		});*/
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
 
@@ -82,20 +91,12 @@ HELLO!
 			}
 		);
 		
-		embedded_svc.liveAgentAPI.startChat({
-			directToAgentRouting: {
-			buttonId: “5731w0000008PB1”,
-			// userId: “”,
-			fallback: true
-		},
-		extraPrechatInfo: [],
-		extraPrechatFormDetails: []
-		});
+
 	};
 
 	if (!window.embedded_svc) {
 		var s = document.createElement('script');
-		s.setAttribute('src', 'https://vwg5-vwgroup--drcchat.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+		s.setAttribute('src', 'https://vwg5-vwgroup--drcchat.my.salesforce.com/embeddedservice/4.1/esw.min.js');
 		s.onload = function() {
 			initESW(null);
 		};
