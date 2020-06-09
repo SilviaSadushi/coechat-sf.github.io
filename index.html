@@ -17,7 +17,7 @@
 	}
 </style>
 
-HELLO!
+HELLOooooooo!
 
 </head>
 
@@ -43,54 +43,28 @@ HELLO!
 		var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-		embedded_svc.snippetSettingsFile.extraPrechatInfo = [{
-			"entityName": "Contact",
-			"showOnCreate": false,
-			"linkToEntityName": "Case",
-			"linkToEntityField": "ContactId",
-			"saveToTranscript": "ContactId",
-			"entityFieldMaps" : [{
-				"doCreate":true,
-				"doFind":true,
-				"fieldName":"FirstName",
-				"isExactMatch":true,
-				"label":"First Name"
-				}, {
-				"doCreate":true,
-				"doFind":true,
-				"fieldName":"LastName",
-				"isExactMatch":true,
-				"label":"Last Name"
-				}, {
-				"doCreate":true,
-				"doFind":true,
-				"fieldName":"Email",
-				"isExactMatch":true,
-				"label":"Email"
-			}],
-			}, {
-			"entityName":"Case",
-			"showOnCreate": true,
-			"saveToTranscript": "CaseId",
-			"entityFieldMaps": [{
-				"isExactMatch": false,
-				"fieldName": "Subject",
-				"doCreate": true,
-				"doFind": false,
-				"label": "Issue"
-				}, {
-				"isExactMatch": false,
-				"fieldName": "Status",
-				"doCreate": true,
-				"doFind": false,
-				"label": "Status"
-				}, {
-				"isExactMatch": false,
-				"fieldName": "Origin",
-				"doCreate": true,
-				"doFind": false,
-				"label": "Origin"
-			}]
+		embedded_svc.settings.extraPrechatInfo = [{
+  			"entityFieldMaps": [{
+    			"doCreate": true,
+    			"doFind": true,
+    			"fieldName": "LastName",
+    			"isExactMatch": true,
+    			"label": "Last Name"
+  		       	}, {
+    			"doCreate": true,
+   			"doFind": true,
+    			"fieldName": "FirstName",
+    			"isExactMatch": true,
+    			"label": "First Name"
+  			}, {
+    			"doCreate": true,
+    			"doFind": true,
+    			"fieldName": "Email",
+    			"isExactMatch": true,
+    			"label": "Email"
+  			}],
+  			"entityName": "Contact",
+  			"showOnCreate": false
 		}];
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
