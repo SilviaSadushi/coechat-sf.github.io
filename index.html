@@ -61,13 +61,8 @@ WELCOME!
 
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
-		
-		embedded_svc.settings.extraPrechatFormDetails = [{  
-    				"label":"Case Language",
-			    	"value":”English”,
-			    	"transcriptFields":[ "CaseLanguage__c" ],
-			    	"displayToAgent":true
-			}];
+					
+		embedded_svc.settings.extraPrechatFormDetails = [{"label":"Text", "transcriptFields": ["CaseLanguage__c"]}];
 			
 		embedded_svc.settings.extraPrechatInfo = [{
   			"entityFieldMaps": [{
