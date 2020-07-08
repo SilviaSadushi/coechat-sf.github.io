@@ -7,10 +7,12 @@
 
 	<h1>WELCOME IN PROD ENV</h1>
 	
-<form>
-    <label for="pswd">To see button please enter password and click Submit: </label>
-    <input type="password" id="pswd">
-	<button id="myBtn" onclick="checkPswd()">Submit</button>
+<form class="pure-form">
+    <fieldset>
+	    <legend>To see button please enter password and click Submit: </legend>
+	    <input type="password" id="pswd">
+	    <button type="submit" class="pure-button pure-button-primary" onclick="checkPswd()">Submit</but
+    </fieldset>		
 </form>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
