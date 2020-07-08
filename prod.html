@@ -7,28 +7,28 @@
 
 	<h1>WELCOME IN PROD ENV</h1>
 	
-<form>
+<!--<form>
 	    <legend>To see button please enter password and click Submit: </legend>
 	    <input type="password" id="pswd">
 	    <button onclick="checkPswd()" id="myButton">Submit</but	
-</form>
+</form>-->
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">	
 	
-   document.getElementById("pswd")
+   /*document.getElementById("pswd")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("myButton").click();
     }
-    });
+    });*/
 		
-    function checkPswd() {
-	    preventDefault();
-	    alert(pswd +  ',' + document.getElementById("pswd").value);
-        var confirmPassword = "admin";
-        var password = document.getElementById("pswd").value;
+    //function checkPswd() {
+	    //preventDefault();
+	   // alert(pswd +  ',' + document.getElementById("pswd").value);
+       // var confirmPassword = "admin";
+        //var password = document.getElementById("pswd").value;
         //if (password == confirmPassword) {
 		var language = 'en_GB';
 		var languageCodes = new Map();
@@ -112,7 +112,7 @@
 	//}else{
             //alert("Passwords do not match.");        	
         //}
-    }
+    //}
 	
 </script>
 </body>
