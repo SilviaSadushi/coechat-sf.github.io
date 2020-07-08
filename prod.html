@@ -17,7 +17,7 @@
 <script type="text/javascript">
    document.getElementById("pswd").addEventListener("keyup", function(event) {
     event.preventDefault();
-	   console.log('pswd: ', pswd + '!');
+	   console.log('pswd: ', document.getElementById("pswd").value + '!');
     if (event.keyCode === 13) {
 	    alert("Enter!");
         document.getElementById("myBtn").click();
@@ -28,9 +28,10 @@
 	
     function checkPswd() {
 	    console.log('function fired');
+	    
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
-	    console.log('password: ', password);
+	console.log('password: ', password);
         if (password == confirmPassword) {
 		
 		
