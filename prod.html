@@ -20,7 +20,9 @@
 	    alert(pswd +  ',' + document.getElementById("pswd").value);
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
+	    alert('password: ' , password);
         if (password == confirmPassword) {
+		alert('from if');
 			var language = 'en_GB';
 			var languageCodes = new Map();
 				languageCodes.set('en_GB','English');
