@@ -4,6 +4,8 @@
     <title>Login page</title>
 </head>
 <body>
+	<h1>WELCOME IN PROD ENV!</h1>
+	
 <form>
     <label for="pswd">To see button please enter password: </label>
     <input type="password" id="pswd">
@@ -16,6 +18,7 @@ script type='text/javascript' src='https://service.force.com/embeddedservice/5.0
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
         if (password == confirmPassword) {
+		
 		
 			var language = 'en_GB';
 			var languageCodes = new Map();
@@ -38,7 +41,7 @@ script type='text/javascript' src='https://service.force.com/embeddedservice/5.0
 
 				// Settings for Chat
 				//embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-					//if (this.language === "de_DE"){return "5736E0000004DFg"};			
+					//if (this.language === "de_DE"){return "5731i000000CijT"};			
 				//};
 				//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
 				//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
