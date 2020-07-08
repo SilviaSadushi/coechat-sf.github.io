@@ -15,12 +15,13 @@
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">
-	
-   $("#pswd").keyup(function(event){
-      if(event.keyCode === 13){
-         $("#myBtn").click();
-      }
-   });
+   document.getElementById("pswd").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("myBtn").click();
+    }
+   });	
+
 	
 	
     function checkPswd() {
