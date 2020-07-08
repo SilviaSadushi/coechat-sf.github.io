@@ -10,105 +10,33 @@
 <form>
 	    <legend>To see button please enter password and click Submit: </legend>
 	    <input type="password" id="pswd">
-	    <button onclick="checkPswd()">Submit</but	
+	    <button onclick="checkPswd()" id="myButton">Submit</but	
 </form>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">	
 	
+   document.getElementById("pswd")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("myButton").click();
+    }
+    });
+		
+	
     function checkPswd() {
 	    alert(pswd +  ',' + document.getElementById("pswd").value);
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
-	    alert('password: ' , password);
         if (password == confirmPassword) {
 		alert('from if');
-			var language = 'en_GB';
-			var languageCodes = new Map();
-				languageCodes.set('en_GB','English');
-				languageCodes.set('de_DE','Deutsch');
-			var marketCodes = new Map();
-				marketCodes.set('en_GB','GB');
-				marketCodes.set('de_DE','DE');
-
-
-			var initESW = function(gslbBaseURL) {
-				alert('in init')'
-				embedded_svc.settings.displayHelpButton = true; //Or false
-				embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
-
-				embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-					if (this.language === "de_DE"){return "5731i000000CijT"};			
-				};
-
-				embedded_svc.settings.enabledFeatures = ['LiveAgent'];
-				embedded_svc.settings.entryFeature = 'LiveAgent';
-
-				embedded_svc.settings.extraPrechatFormDetails = [{
-						"label":"Case Language",
-						"value" : languageCodes.get(this.language),
-						"transcriptFields": ["CaseLanguage__c"]
-					},
-					{	"label":"Case Market",
-						"value" : marketCodes.get(this.language),
-						"transcriptFields": ["CaseMarket__c"]
-				}];
-
-				embedded_svc.settings.extraPrechatInfo = [{
-					"entityFieldMaps": [{
-						"doCreate": true,
-						"doFind": false,
-						"fieldName": "LastName",
-						"isExactMatch": true,
-						"label": "Last Name"
-					}, {
-						"doCreate": true,
-						"doFind": false,
-						"fieldName": "FirstName",
-						"isExactMatch": true,
-						"label": "First Name"
-					}, {
-						"doCreate": true,
-						"doFind": false,
-						"fieldName": "Email",
-						"isExactMatch": true,
-						"label": "Email"
-					}],
-					"entityName": "Contact",
-					"showOnCreate": false
-				}];
-
-				embedded_svc.init(
-				'https://vwg5-vwgroup.my.salesforce.com',
-				'https://vwg5-vwgroup.force.com/drcwholesale',
-				gslbBaseURL,
-				'00D1i00000091OA',
-				'AudiEN',
-					{
-						baseLiveAgentContentURL: 'https://c.la1-c2-fra.salesforceliveagent.com/content',
-						deploymentId: '5721i000000CiBE',
-						buttonId: '5731i000000CijO',
-						baseLiveAgentURL: 'https://d.la1-c2-fra.salesforceliveagent.com/chat',
-						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I1i000000KzYbEAK_1732d66a3fd',
-						isOfflineSupportEnabled: false
-					}
-				);
-			};
-
-			if (!window.embedded_svc) {
-				var s = document.createElement('script');
-				s.setAttribute('src', 'https://vwg5-vwgroup.my.salesforce.com/embeddedservice/5.0/esw.min.js');
-				s.onload = function() {
-					initESW(null);
-				};
-				document.body.appendChild(s);
-			} else {
-				initESW('https://service.force.com');
-			}  
-		}else{
-            	    alert("Passwords do not match.");
-        	}
+			
+	}else{
+            alert("Passwords do not match.");        	
+        }
     }
+	
 </script>
 </body>
 </html>
