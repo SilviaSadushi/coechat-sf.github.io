@@ -20,8 +20,6 @@
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
         if (password == confirmPassword) {
-		
-		
 			var language = 'en_GB';
 			var languageCodes = new Map();
 				languageCodes.set('en_GB','English');
@@ -103,10 +101,9 @@
 			} else {
 				initESW('https://service.force.com');
 			}  
-		}
-        else{
-            alert("Passwords do not match.");
-        }
+		}else{
+            	    alert("Passwords do not match.");
+        	}
     }
 </script>
 </body>
