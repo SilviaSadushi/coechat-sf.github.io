@@ -8,21 +8,13 @@
 	<h1>WELCOME IN PROD ENV</h1>
 	
 <form>
-    <label for="pswd">To see button please enter password: </label>
+    <label for="pswd">To see button please enter password and click Submit: </label>
     <input type="password" id="pswd">
 	<button id="myBtn" onclick="checkPswd()">Submit</button>
 </form>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
-<script type="text/javascript">
-   document.getElementById("pswd").addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("myBtn").click();
-    }
-   });	
-
-	
+<script type="text/javascript">	
 	
     function checkPswd() {    
         var confirmPassword = "admin";
