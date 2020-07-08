@@ -16,7 +16,7 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">
    document.getElementById("pswd").addEventListener("keyup", function(event) {
-    event.preventDefault();
+    //event.preventDefault();
     if (event.keyCode === 13) {
         document.getElementById("myBtn").click();
     }
@@ -27,6 +27,7 @@
     function checkPswd() {    
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
+	    console.log('passowrd: ',password);
         if (password == confirmPassword) {
 		
 		
