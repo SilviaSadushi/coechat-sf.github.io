@@ -7,11 +7,11 @@
 
 	<h1>WELCOME IN PROD ENV</h1>
 	
-<!--<form>
+<form>
 	    <legend>To see button please enter password and click Submit: </legend>
 	    <input type="password" id="pswd">
 	    <button onclick="checkPswd()" id="myButton">Submit</but	
-</form>-->
+</form>
 	
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">	
@@ -24,12 +24,12 @@
     }
     });*/
 		
-    //function checkPswd() {
+    function checkPswd() {
 	    //preventDefault();
 	   // alert(pswd +  ',' + document.getElementById("pswd").value);
-       // var confirmPassword = "admin";
-        //var password = document.getElementById("pswd").value;
-        if (true) {
+        var confirmPassword = "admin";
+        var password = document.getElementById("pswd").value;
+        if (password == confirmPassword) {
 		var language = 'en_GB';
 		var languageCodes = new Map();
 			languageCodes.set('en_GB','English');
@@ -112,8 +112,7 @@
 	}else{
             alert("Passwords do not match.");        	
         }
-    //}
-	
+   }	
 </script>
 </body>
 </html>
