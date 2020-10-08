@@ -42,50 +42,55 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	var language = 'pt_BR';
+	var language = 'pl';
+	
 	var languageCodes = new Map();
 	    languageCodes.set('en_US','English');
 	    languageCodes.set('de_DE','Deutsch');
 	    languageCodes.set('pl','Polish');
 	    languageCodes.set('pt_BR','Portuguese');
+	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
 	    marketCodes.set('de_DE','DE');
 	    marketCodes.set('pl','PL');
 	    marketCodes.set('pt_BR','PT');
+	
+	
+	//new setting - START
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
-	    disabledMinimizedTextMap.set('de_DE', 'Agent ist offline');
-	    disabledMinimizedTextMap.set('pl','Wszyscy agenci są niedostępni');
+	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
+	    disabledMinimizedTextMap.set('pl', 'Wszyscy agenci są niedostępni');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
-	    defaultMinimizedTextMap.set('de_DE', 'Sprechen mit dem Agent');
-	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');	
-	    
+	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
+	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');
+	
+	var loadingTextMap = new Map();
+	    loadingTextMap.set('en_US','Loading...');
+	    loadingTextMap.set('de_DE','Laden...');
+	    loadingTextMap.set('pl','Ładowanie...');
+	
+	//new setting - STOP
 	
     	var initESW = function(gslbBaseURL) {
-		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = this.language; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.displayHelpButton = true;
+		
+		
+		//new setting - START
+		embedded_svc.settings.language = this.language; 
 		embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);		
 		embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
+		embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
 		
-		
-
-		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
-		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
-
-		//embedded_svc.settings.loadingText = ''; //(Defaults to Loading)
-		//embedded_svc.settings.storageDomain = 'yourdomain.com'; //(Sets the domain for your deployment so that visitors can navigate subdomains during a chat session)
-
-		// Settings for Chat
 		embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 			if (this.language === "de_DE"){return "5731w0000008PAw"};			
 		};
-		//embedded_svc.settings.prepopulatedPrechatFields = {}; //Sets the auto-population of pre-chat form fields
-		//embedded_svc.settings.fallbackRouting = []; //An array of button IDs, user IDs, or userId_buttonId
-		//embedded_svc.settings.offlineSupportMinimizedText = '...'; //(Defaults to Contact Us)
-
+		
+		//new setting - STOP
+		
 		embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 		embedded_svc.settings.entryFeature = 'LiveAgent';
 		
