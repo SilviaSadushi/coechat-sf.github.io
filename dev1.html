@@ -42,16 +42,25 @@
 
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type='text/javascript'>
-	var language = 'en_US';
+	var language = 'pl';
 	var languageCodes = new Map();
-		languageCodes.set('en_US','English');
-		languageCodes.set('de_DE','Deutsch');
+	    languageCodes.set('en_US','English');
+	    languageCodes.set('de_DE','Deutsch');
+	    languageCodes.set('pl','Polish');
 	var marketCodes = new Map();
-		marketCodes.set('en_US','GB');
-		marketCodes.set('de_DE','DE');
+	    marketCodes.set('en_US','GB');
+	    marketCodes.set('de_DE','DE');
+	    marketCodes.set('pl','PL');
+	var disabledMinimizedTextMap = new Map();
+	    disabledMinimizedTextMap.set('en_US,'Agent Offline');
+	    disabledMinimizedTextMap.set('de_DE,'Agent ist offline');
+	    disabledMinimizedTextMap.set('pl','Wszyscy agenci są niedostępni');
+	    
+	
     	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = 'pl'; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = this.language //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);
 		
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
