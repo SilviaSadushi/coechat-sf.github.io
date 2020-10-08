@@ -55,13 +55,19 @@
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent ist offline');
 	    disabledMinimizedTextMap.set('pl','Wszyscy agenci są niedostępni');
+	
+	var defaultMinimizedTextMap = new Map();
+	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
+	    defaultMinimizedTextMap.set('de_DE', 'Sprechen mit dem Agent');
+	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');	
 	    
 	
     	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
 		embedded_svc.settings.language = this.language; //For example, enter 'en' or 'en-US'
-		embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);
-		console.log('disabledMinimizedTextMap.get(this.language)', disabledMinimizedTextMap.get(this.language));
+		embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);		
+		embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
+		
 		
 
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
