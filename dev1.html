@@ -56,10 +56,8 @@
 	var language;
 	function ChangeLanguage(){
 	 	var selected  = document.getElementById("myLanguage").value;
-		console.log('selected: ' , selected);
 		this.language = selected;
-		console.log('language: ', this.language);
-		initESW(null);
+		initESW('https://service.force.com');
 	}	
 	
 	var languageCodes = new Map();
@@ -95,7 +93,6 @@
 	
 	
 	var initESW = function(gslbBaseURL) {
-		console.log('hello world');
 		console.log('language: ', this.language); 
 		embedded_svc.settings.displayHelpButton = true;
 
