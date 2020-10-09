@@ -58,28 +58,24 @@
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
-	    disabledMinimizedTextMap.set('pl', 'Wszyscy agenci są niedostępni');
-	    disabledMinimizedTextMap.set('pt_BR', 'Wszyscy agenci są niedostępni');
+	    disabledMinimizedTextMap.set('pl', 'Agenci niedostępni');
+	    disabledMinimizedTextMap.set('pt_BR', 'Agentes não disponíveis');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');
-	    defaultMinimizedTextMap.set('pt_BR', 'Porozmawiaj z Ekspertem');
+	    defaultMinimizedTextMap.set('pt_BR', 'Conversar com um Perito');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
 	    loadingTextMap.set('pl','Ładowanie...');
-	    loadingTextMap.set('pt_BR','Ładowanie...');
+	    loadingTextMap.set('pt_BR','Carregamento...');
 	
 	//new setting - STOP
 	
 	var language;
-	
-	/*function refresh(){
-		location.reload();
-	}*/
 	
 	function ChangeLanguage(){
 		this.language = document.getElementById("myLanguage").value;
@@ -87,7 +83,7 @@
 		var div2 = document.getElementById("refresh");
 		
 		div1.style.display = 'none';
-		div2.style.display = 'block'
+		div2.style.display = 'block';
 		
 		var initESW = function(gslbBaseURL) {
 			console.log('language: ', this.language); 
