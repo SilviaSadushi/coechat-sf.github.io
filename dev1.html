@@ -71,18 +71,23 @@
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
 	    disabledMinimizedTextMap.set('pl', 'Wszyscy agenci są niedostępni');
+	    disabledMinimizedTextMap.set('pt_BR', 'Wszyscy agenci są niedostępni');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');
+	    defaultMinimizedTextMap.set('pt_BR', 'Porozmawiaj z Ekspertem');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
 	    loadingTextMap.set('pl','Ładowanie...');
+	    loadingTextMap.set('pt_BR','Ładowanie...');
 	
 	//new setting - STOP
+	
+	var language;
 	
 	function ChangeLanguage(){
 		this.language = document.getElementById("myLanguage").value;
