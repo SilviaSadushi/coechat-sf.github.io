@@ -22,14 +22,20 @@
 	
 	
  <h1>DEV 1</h1>
+	<div id="chooseLanguage">
+		<label for="language">Please choose your language: </label>
+		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
+			<option value="en_US">English</option>
+			<option value="de_DE">Deutch</option>
+			<option value="pl">Polski</option>
+			<option value="pt_BR">Português</option>		
+		</select>
+	</div>
 	
-	<label for="language">Please choose your language: </label>
-	<select id="myLanguage" name="language" onchange="ChangeLanguage()">
-		<option value="en_US">English</option>
-		<option value="de_DE">Deutch</option>
-		<option value="pl">Polski</option>
-		<option value="pt_BR">Português</option>		
-	</select>
+	<div id="refresh">
+		Now you are using {!this.language}. To change language refresh site:
+		Hello word button
+	</div>
 	
 	
 	<p>
@@ -91,7 +97,10 @@
 	
 	function ChangeLanguage(){
 		this.language = document.getElementById("myLanguage").value;
-	
+		var div1 = document.getElementById("chooseLanguage");
+		
+		div1.style.visibility = 'hidden';
+		
 		var initESW = function(gslbBaseURL) {
 			console.log('language: ', this.language); 
 			embedded_svc.settings.displayHelpButton = true;
