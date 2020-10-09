@@ -98,8 +98,9 @@
 			embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
 			embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
 
-			//if(this.language === "de_DE"){return "5731w0000008PAw"};
+			
 			embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
+				if(this.language === "de_DE"){return "5731w0000008PAw"};
 				if(this.language === "pl"){return "5735E000000CabB"};
 			};
 			//new setting - STOP
