@@ -55,6 +55,12 @@
 	    marketCodes.set('pl_PL','PL');
 	    marketCodes.set('pt_BR','PT');
 	
+	var chatlanguages = new Map();
+	    chatlanguages.set('en_US', 'en_US');
+	    chatlanguages.set('de_DE', 'de');
+	    chatlanguages.set('pl_PL', 'pl');
+	    chatlanguages.set('pt_BR', 'pt_BR');
+	
 	
 	//new setting - START
 	var disabledMinimizedTextMap = new Map();
@@ -89,11 +95,10 @@
 		document.getElementById("header").innerHTML = "DEV 1 - " +  languageCodes.get(this.language) ;
 		
 		var initESW = function(gslbBaseURL) {
-			console.log('language: ', this.language); 
 			embedded_svc.settings.displayHelpButton = true;
 
 			//new setting - START
-			embedded_svc.settings.language = this.language; 
+			embedded_svc.settings.language = chatlanguages.get(this.language); 
 			embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);		
 			embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
 			embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
