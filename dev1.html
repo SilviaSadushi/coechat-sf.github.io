@@ -34,7 +34,7 @@
 			<option value="">none</option>
 			<option value="en_US">English</option>
 			<option value="de_DE">Deutsch</option>
-			<option value="pl">Polski</option>
+			<option value="pl_PL">Polski</option>
 			<option value="pt_BR">Português</option>		
 		</select>
 	</div>
@@ -46,13 +46,13 @@
 	var languageCodes = new Map();
 	    languageCodes.set('en_US','English');
 	    languageCodes.set('de_DE','Deutsch');
-	    languageCodes.set('pl','Polish');
+	    languageCodes.set('pl_PL','Polish');
 	    languageCodes.set('pt_BR','Portuguese');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
 	    marketCodes.set('de_DE','DE');
-	    marketCodes.set('pl','PL');
+	    marketCodes.set('pl_PL','PL');
 	    marketCodes.set('pt_BR','PT');
 	
 	
@@ -60,19 +60,19 @@
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
-	    disabledMinimizedTextMap.set('pl', 'Agenci niedostępni');
+	    disabledMinimizedTextMap.set('pl_PL', 'Agenci niedostępni');
 	    disabledMinimizedTextMap.set('pt_BR', 'Agentes não disponíveis');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
-	    defaultMinimizedTextMap.set('pl', 'Porozmawiaj z Ekspertem');
+	    defaultMinimizedTextMap.set('pl_PL', 'Porozmawiaj z Ekspertem');
 	    defaultMinimizedTextMap.set('pt_BR', 'Conversar com um Perito');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
-	    loadingTextMap.set('pl','Ładowanie...');
+	    loadingTextMap.set('pl_PL','Ładowanie...');
 	    loadingTextMap.set('pt_BR','Carregamento...');
 	
 	//new setting - STOP
@@ -101,7 +101,8 @@
 			
 			embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 				if(this.language === "de_DE"){return "5731w0000008PAw"};
-				if(this.language === "pl"){return "5735E000000CabB"};
+				if(this.language === "pl_PL"){return "5735E000000CabB"};
+				if(this.language === "pt_BR"){return "5735E000000CabL"};
 			};
 			//new setting - STOP
 
