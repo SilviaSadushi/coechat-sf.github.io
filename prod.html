@@ -9,12 +9,6 @@
 		<button onclick="location.reload()">Change language</button>
 	</div>
 	
-<form>
-	<legend>To see button please enter password and click Submit: </legend>
-	<input type="password" id="pswd">
-	<button type="button" onclick="checkPswd()" id="myButton">Submit</but	
-</form>
-
 	<div id="chooseLanguage">
 		<label for="language">Please choose your language</label>
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
@@ -31,14 +25,7 @@
 <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
 <script type="text/javascript">	
 	
-   document.getElementById("pswd")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
-    if (event.keyCode === 13) {
-        document.getElementById("myButton").click();
-    }
-    });
-		
+	
     //function checkPswd() {
         var confirmPassword = "admin";
         var password = document.getElementById("pswd").value;
