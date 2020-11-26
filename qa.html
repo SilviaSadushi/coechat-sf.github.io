@@ -139,22 +139,75 @@
 				"entityName": "Contact",
 				"showOnCreate": false
 			}];
-
-			embedded_svc.init(
-				'https://vwg5-vwgroup--qa.my.salesforce.com',
-				'https://qa-vwg5-vwgroup.cs85.force.com/drcwholesale',
-				gslbBaseURL,
-				'00D6E0000004Yt8',
-				'AudiChatEN',
-				{
-					baseLiveAgentContentURL: 'https://c.la1-c1cs-par.salesforceliveagent.com/content',
-					deploymentId: '5726E0000004Cek',
-					buttonId: '5736E0000004DFb',
-					baseLiveAgentURL: 'https://d.la1-c1cs-par.salesforceliveagent.com/chat',
-					eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I6E0000004CRbUAM_172e5bcef62',
-					isOfflineSupportEnabled: false
-				}
-			);
+			
+			if(this.language === "en_US"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs85.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiChatEN',
+					{
+						baseLiveAgentContentURL: 'https://c.la1-c1cs-par.salesforceliveagent.com/content',
+						deploymentId: '5726E0000004Cek',
+						buttonId: '5736E0000004DFb',
+						baseLiveAgentURL: 'https://d.la1-c1cs-par.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I6E0000004CRbUAM_172e5bcef62',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "de_DE"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiChatDE',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5726E0000004Cez',
+						buttonId: '5736E0000004DFg',
+						baseLiveAgentURL: 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I6E0000004CRgUAM_172e5be60d5',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "pl_PL"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiPL',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004Ckx',
+						buttonId: '5737a0000004DLF',
+						baseLiveAgentURL: 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CVTEA2_17564fd2d5e',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "pt_BR"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiPT',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004Cky',
+						buttonId: '5737a0000004DLK',
+						baseLiveAgentURL: 'https://d.la3-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CVUEA2_17564fe63a0',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
 		};
 
 		if (!window.embedded_svc) {
