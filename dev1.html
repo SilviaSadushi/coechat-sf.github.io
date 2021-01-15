@@ -35,7 +35,8 @@
 			<option value="en_US">English</option>
 			<option value="de_DE">Deutsch</option>
 			<option value="pl_PL">Polski</option>
-			<option value="pt_BR">Português</option>		
+			<option value="pt_BR">Português</option>
+			<option value='en_IE">English(Ireland)</option>
 		</select>
 	</div>
  
@@ -48,18 +49,21 @@
 	    languageCodes.set('de_DE','Deutsch');
 	    languageCodes.set('pl_PL','Polish');
 	    languageCodes.set('pt_BR','Portuguese');
+	    languageCodes.set('en_IE','English');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
 	    marketCodes.set('de_DE','DE');
 	    marketCodes.set('pl_PL','PL');
 	    marketCodes.set('pt_BR','PT');
+	    marketCodes.set('en_IE','IE');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
 	    chatlanguages.set('de_DE', 'de');
 	    chatlanguages.set('pl_PL', 'pl');
 	    chatlanguages.set('pt_BR', 'pt_BR');
+	    chatlanguages.set('en_IE', 'en_US');
 	
 	
 	//new setting - START
@@ -68,18 +72,21 @@
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
 	    disabledMinimizedTextMap.set('pl_PL', 'Agenci niedostępni');
 	    disabledMinimizedTextMap.set('pt_BR', 'Agentes não disponíveis');
+	    disabledMinimizedTextMap.set('en_IE', 'Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('pl_PL', 'Porozmawiaj z Ekspertem');
 	    defaultMinimizedTextMap.set('pt_BR', 'Conversar com um Perito');
+	    defaultMinimizedTextMap.set('en_IE', 'Chat with an Expert');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
 	    loadingTextMap.set('pl_PL','Ładowanie...');
 	    loadingTextMap.set('pt_BR','Carregamento...');
+	    loadingTextMap.set('en_IE','Loading...');
 	
 	//new setting - STOP
 	
@@ -215,6 +222,25 @@
 					}
 				);
 			}
+		        if(this.language === "en_IE"){	
+				embedded_svc.init(
+					'https://vwg5-vwgroup--dev1.my.salesforce.com',
+					'https://dev1-vwg5-vwgroup.cs84.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D5E000000DL4w',
+					'AudiIE',
+					{
+						baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5725E0000008PFC',
+						buttonId: '5735E0000008QAh',
+						baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5E0000004CaxUAE_17705fd52ac',
+						isOfflineSupportEnabled: false
+					}
+				);
+																    
+			}	
+																    
 		}; 
 		
 		if (!window.embedded_svc) {
