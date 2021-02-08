@@ -32,11 +32,13 @@
 		<label for="language">Please choose your language:</label>
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
 			<option value="">none</option>
-			<option value="en_US">English</option>
+			<option value="dk_DK">Dansk</option>
 			<option value="de_DE">Deutsch</option>
+			<option value="en_US">English</option>
+			<option value="en_IE">English(Ireland)</option>
 			<option value="pl_PL">Polski</option>
 			<option value="pt_BR">Português</option>
-			<option value="en_IE">English(Ireland)</option>
+			<option value="se_SE">Svensk</option>
 		</select>
 	</div>
  
@@ -50,6 +52,8 @@
 	    languageCodes.set('pl_PL','Polish');
 	    languageCodes.set('pt_BR','Portuguese');
 	    languageCodes.set('en_IE','English');
+	    languageCodes.set('dk_DK','Danish');
+	    languageCodes.set('se_SE','Swedish');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
@@ -57,6 +61,8 @@
 	    marketCodes.set('pl_PL','PL');
 	    marketCodes.set('pt_BR','PT');
 	    marketCodes.set('en_IE','IE');
+	    marketCodes.set('dk_DK','DK');
+	    marketCodes.set('se_SE','SE');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
@@ -64,15 +70,17 @@
 	    chatlanguages.set('pl_PL', 'pl');
 	    chatlanguages.set('pt_BR', 'pt_BR');
 	    chatlanguages.set('en_IE', 'en_US');
+	    chatlanguages.set('dk_DK', 'da');
+	    chatlanguages.set('se_SE', 'sv');
 	
-	
-	//new setting - START
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
 	    disabledMinimizedTextMap.set('pl_PL', 'Agenci niedostępni');
 	    disabledMinimizedTextMap.set('pt_BR', 'Agentes não disponíveis');
 	    disabledMinimizedTextMap.set('en_IE', 'Agent Offline');
+	    disabledMinimizedTextMap.set('dk_DK', 'Agent Offline');
+	    disabledMinimizedTextMap.set('se_SE', 'Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
@@ -80,6 +88,8 @@
 	    defaultMinimizedTextMap.set('pl_PL', 'Porozmawiaj z Ekspertem');
 	    defaultMinimizedTextMap.set('pt_BR', 'Conversar com um Perito');
 	    defaultMinimizedTextMap.set('en_IE', 'Chat with an Expert');
+	    defaultMinimizedTextMap.set('dk_DK', 'Chat med en ekspert');
+	    defaultMinimizedTextMap.set('se_SE', 'Chatta med en exper');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
@@ -87,9 +97,9 @@
 	    loadingTextMap.set('pl_PL','Ładowanie...');
 	    loadingTextMap.set('pt_BR','Carregamento...');
 	    loadingTextMap.set('en_IE','Loading...');
-	
-	//new setting - STOP
-	
+	    loadingTextMap.set('dk_DK','Indlæser...');
+	    loadingTextMap.set('se_SE','Läser in...');
+		
 	var language;
 	
 	function ChangeLanguage(){
@@ -103,20 +113,18 @@
 		
 		var initESW = function(gslbBaseURL) {
 			embedded_svc.settings.displayHelpButton = true;
-
-			//new setting - START
+			
 			embedded_svc.settings.language = chatlanguages.get(this.language); 
 			embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);		
 			embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
 			embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
 
-			
+			//don't needed
 			embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
 				if(this.language === "de_DE"){return "5731w0000008PAw"};
 				if(this.language === "pl_PL"){return "5735E000000CabB"};
 				if(this.language === "pt_BR"){return "5735E000000CabL"};
 			};
-			//new setting - STOP
 
 			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 			embedded_svc.settings.entryFeature = 'LiveAgent';
@@ -239,7 +247,13 @@
 					}
 				);
 																    
-			}	
+			}
+			if(this.language === "dk_DK"){	
+				//here code																    
+			}
+			if(this.language === "se_SE"){	
+				//here code																    
+			}
 																    
 		}; 
 		
