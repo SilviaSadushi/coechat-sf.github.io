@@ -31,11 +31,11 @@
 		<label for="language">Please choose your language</label>
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
 			<option value="">none</option>
-			<option value="en_US">English</option>
 			<option value="de_DE">Deutsch</option>
+			<option value="en_US">English</option>
+			<option value="en_IE">English(Ireland)</option>
 			<option value="pl_PL">Polski</option>
-			<option value="pt_BR">Português</option>
-			<option value="en_IE">English (Ireland)</option>
+			<option value="pt_BR">Português</option>			
 		</select>
 	</div>
 	 
@@ -92,7 +92,7 @@
 		
 		div1.style.display = 'none';
 		div2.style.display = 'block';
-		document.getElementById("header").innerHTML = "QA - " +  languageCodes.get(this.language);	
+		document.getElementById("header").innerHTML = "QA - " +  languageCodes.get(this.language) +' ' + marketCodes.get(this.language);
 		
 	
 		var initESW = function(gslbBaseURL) {
