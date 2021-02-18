@@ -103,13 +103,6 @@
 			embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
 			embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
 			
-			embedded_svc.settings.directToButtonRouting = function(prechatFormData) {
-				if (this.language === "de_DE"){return "5736E0000004DFg"};
-				if(this.language === "pl_PL"){return "5737a0000004DLF"}; // add button id after deployment
-				if(this.language === "pt_BR"){return "5737a0000004DLK"}; // add button id after deplyment
-			};
-			console.log('embedded_svc.settings.directToButtonRouting : ',embedded_svc.settings.directToButtonRouting );
-
 			embedded_svc.settings.enabledFeatures = ['LiveAgent'];
 			embedded_svc.settings.entryFeature = 'LiveAgent';
 		
