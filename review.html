@@ -300,17 +300,56 @@
 				);
 			}
 			if(this.language === "fi_FI"){
-				//here code
-				document.getElementById("header").innerHTML = "NOT ACTIVE YET";
+				embedded_svc.init(
+					'https://vwg5-vwgroup--review.my.salesforce.com',
+					'https://review-vwg5-vwgroup.cs88.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D9E000000918y',
+					'AudiFIfi',
+					{
+						baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5729E00000000ib',
+						buttonId: '5739E00000001hG',
+						baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I9E00000000VnUAI_178cfbb0057',
+						isOfflineSupportEnabled: false
+					}
+				);
 				
 			}
 			if(this.language === "sv_FI"){
-				//here code
-				document.getElementById("header").innerHTML = "NOT ACTIVE YET ";
+				embedded_svc.init(
+					'https://vwg5-vwgroup--review.my.salesforce.com',
+					'https://review-vwg5-vwgroup.cs88.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D9E000000918y',
+					'AudiFIsv',
+					{
+						baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5729E00000000ic',
+						buttonId: '5739E00000001hH',
+						baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I9E00000000VoUAI_178cfbc8fe7',
+						isOfflineSupportEnabled: false
+					}
+				);
 			}
 			if(this.language === "no_NO"){
-				//here code
-				document.getElementById("header").innerHTML = "NOT ACTIVE YET";
+				embedded_svc.init(
+					'https://vwg5-vwgroup--review.my.salesforce.com',
+					'https://review-vwg5-vwgroup.cs88.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D9E000000918y',
+					'AudiNO',
+					{
+						baseLiveAgentContentURL: 'https://c.la2-c1cs-fra.salesforceliveagent.com/content',
+						deploymentId: '5729E00000000id',
+						buttonId: '5739E00000001hI',
+						baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I9E00000000VpUAI_178cfbd95f2',
+						isOfflineSupportEnabled: false
+					}
+				);
 			}
 		};
 			
