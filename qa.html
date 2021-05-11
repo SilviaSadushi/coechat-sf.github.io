@@ -134,7 +134,7 @@
 		var initESW = function(gslbBaseURL) {
 			embedded_svc.settings.displayHelpButton = true; //Or false
 
-			embedded_svc.settings.language = 'pl'; //chatlanguages.get(this.language); 
+			embedded_svc.settings.language = chatlanguages.get(this.language); 
 			embedded_svc.settings.disabledMinimizedText = disabledMinimizedTextMap.get(this.language);		
 			embedded_svc.settings.defaultMinimizedText = defaultMinimizedTextMap.get(this.language);
 			embedded_svc.settings.loadingText = loadingTextMap.get(this.language);
