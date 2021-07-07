@@ -42,8 +42,46 @@
 <script type='text/javascript'>
 	var initESW = function(gslbBaseURL) {
 		embedded_svc.settings.displayHelpButton = true; //Or false
-		embedded_svc.settings.language = ''; //For example, enter 'en' or 'en-US'
+		embedded_svc.settings.language = 'fr';
+		embedded_svc.settings.disabledMinimizedText = "Agent hors ligne";
+		embedded_svc.settings.defaultMinimizedText = "Chattez avec un expert";
+		embedded_svc.settings.loadingText = "Chargement..."
 
+		embedded_svc.settings.extraPrechatFormDetails = [{
+					"label":"Case Language",
+					"value" : "French",
+					"transcriptFields": ["CaseLanguage__c"]
+				},
+				{	"label":"Case Market",
+	       				"value" : "FR",
+					"transcriptFields": ["CaseMarket__c"]
+				}];
+		
+		embedded_svc.settings.extraPrechatInfo = [{
+					"entityFieldMaps": [{
+						"doCreate": true,
+						"doFind": false,
+						"fieldName": "LastName",
+						"isExactMatch": true,
+						"label": "Last Name"
+					}, {
+						"doCreate": true,
+						"doFind": false,
+						"fieldName": "FirstName",
+						"isExactMatch": true,
+						"label": "First Name"
+					}, {
+						"doCreate": true,
+						"doFind": false,
+						"fieldName": "Email",
+						"isExactMatch": true,
+						"label": "Email"
+					}],
+
+					"entityName": "Contact",
+					"showOnCreate": false
+				}];
+		
 		//embedded_svc.settings.defaultMinimizedText = '...'; //(Defaults to Chat with an Expert)
 		//embedded_svc.settings.disabledMinimizedText = '...'; //(Defaults to Agent Offline)
 
