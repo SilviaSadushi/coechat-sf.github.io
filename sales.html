@@ -23,7 +23,7 @@
 <body>
 	
 	
- <h1 id="header">DEV 1 sales</h1>
+ <h1 id="header">Sales</h1>
 	<div id="refresh" style="display: none;">
 		<button onclick="location.reload()">Change language</button>
 	</div>
@@ -32,6 +32,7 @@
 		<label for="language">Please choose your language:</label>
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
 			<option value="">none</option>
+			<option value="fr_FR">French</option>
 			<option value="dk_DK">Dansk</option>
 			<option value="de_DE">Deutsch</option>
 			<option value="en_US">English</option>
@@ -50,6 +51,7 @@
 <script type='text/javascript'>
 	
 	var languageCodes = new Map();
+	    languageCodes.set('fr_FR','French');
 	    languageCodes.set('en_US','English');
 	    languageCodes.set('de_DE','Deutsch');
 	    languageCodes.set('pl_PL','Polish');
@@ -62,6 +64,7 @@
 	    languageCodes.set('no_NO','Norwegian');
 	
 	var marketCodes = new Map();
+	    marketCodes.set('fr_FR','FR');
 	    marketCodes.set('en_US','GB');
 	    marketCodes.set('de_DE','DE');
 	    marketCodes.set('pl_PL','PL');
@@ -74,6 +77,7 @@
 	    marketCodes.set('no_NO','NO');
 	
 	var chatlanguages = new Map();
+	    chatlanguages.set('fr_FR', 'fr_FR');
 	    chatlanguages.set('en_US', 'en_US');
 	    chatlanguages.set('de_DE', 'de');
 	    chatlanguages.set('pl_PL', 'pl');
@@ -86,6 +90,7 @@
 	    chatlanguages.set('no_NO', 'no');
 	
 	var disabledMinimizedTextMap = new Map();
+	    disabledMinimizedTextMap.set('fr_FR', 'Agent hors ligne');
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
 	    disabledMinimizedTextMap.set('pl_PL', 'Agenci niedostępni');
@@ -98,6 +103,7 @@
 	    disabledMinimizedTextMap.set('no_NO','Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
+	    defaultMinimizedTextMap.set('fr_FR', 'Chattez avec un expert');
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('pl_PL', 'Porozmawiaj z Ekspertem');
@@ -110,6 +116,7 @@
 	    defaultMinimizedTextMap.set('no_NO', 'Chat med en ekspert');
 	
 	var loadingTextMap = new Map();
+	    loadingTextMap.set('fr_FR', 'Chargement...');
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
 	    loadingTextMap.set('pl_PL','Ładowanie...');
@@ -130,7 +137,7 @@
 		
 		div1.style.display = 'none';
 		div2.style.display = 'block';
-		document.getElementById("header").innerHTML = "DEV 1 - sales" +  languageCodes.get(this.language) +' ' + marketCodes.get(this.language) ;
+		document.getElementById("header").innerHTML = "Sales" +  languageCodes.get(this.language) +' ' + marketCodes.get(this.language) ;
 		
 		var initESW = function(gslbBaseURL) {
 			embedded_svc.settings.displayHelpButton = true;
