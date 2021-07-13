@@ -33,7 +33,6 @@
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
 			<option value="">none</option>
 			<option value="fr_FR">French</option>
-			<option value="en_IE">English(Ireland)</option>
 		</select>
 	</div>
  
@@ -43,27 +42,21 @@
 	
 	var languageCodes = new Map();
 	    languageCodes.set('fr_FR','French');
-	    languageCodes.set('en_IE','English');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('fr_FR','FR');
-	    marketCodes.set('en_IE','IE');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('fr_FR', 'fr_FR');
-	    chatlanguages.set('en_IE', 'en_US');
 	
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('fr_FR', 'Agent hors ligne');
-	    disabledMinimizedTextMap.set('en_IE', 'Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('fr_FR', 'Chattez avec un expert');
-	    defaultMinimizedTextMap.set('en_IE', 'Chat with an Expert');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('fr_FR', 'Chargement...');
-	    loadingTextMap.set('en_IE','Loading...');
 		
 	var language;
 	
