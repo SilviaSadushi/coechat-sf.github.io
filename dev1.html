@@ -45,6 +45,7 @@
 			<option value="fi_FI">Finnish(Finland)</option>
 			<option value="sv_FI">Swedish(Finland)</option>
 			<option value="no_NO">Norwegian</option>
+			<option value="it_IT">Italian</option>
 		</select>
 	</div>
  
@@ -66,6 +67,7 @@
 	    languageCodes.set('fi_FI','Finnish');
 	    languageCodes.set('sv_FI','Swedish');	
 	    languageCodes.set('no_NO','Norwegian');
+	    languageCodes.set('it_IT','Italian');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
@@ -81,6 +83,7 @@
 	    marketCodes.set('fi_FI','FI');
 	    marketCodes.set('sv_FI','FI');
 	    marketCodes.set('no_NO','NO');
+	    marketCodes.set('it_IT','IT');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
@@ -96,6 +99,7 @@
 	    chatlanguages.set('fi_FI', 'fi');
 	    chatlanguages.set('sv_FI', 'sv');
 	    chatlanguages.set('no_NO', 'no');
+	    chatlanguages.set('it_IT', 'it');
 	
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
@@ -111,6 +115,7 @@
 	    disabledMinimizedTextMap.set('fi_FI','Agentti offline-tilassa');
 	    disabledMinimizedTextMap.set('sv_FI','Agent Offline');
 	    disabledMinimizedTextMap.set('no_NO','Agent Offline');
+	    disabledMinimizedTextMap.set('it_IT','Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
@@ -126,7 +131,8 @@
 	    defaultMinimizedTextMap.set('fi_FI', 'Keskustele asiantuntijan kanssa');
 	    defaultMinimizedTextMap.set('sv_FI', 'Chatta med en expert');
 	    defaultMinimizedTextMap.set('no_NO', 'Chat med en ekspert');
-	
+	    defaultMinimizedTextMap.set('it_IT', 'Chatta con un esperto');
+
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
@@ -141,7 +147,8 @@
 	    loadingTextMap.set('fi_FI','Ladataan...');
 	    loadingTextMap.set('sv_FI','Läser in...');
 	    loadingTextMap.set('no_NO','Laster inn...');
-		
+	    loadingTextMap.set('it_IT','Caricamento...');
+
 	var language;
 	
 	function ChangeLanguage(){
@@ -422,6 +429,23 @@
 						buttonId: '5735E0000004DP6',
 						baseLiveAgentURL: 'https://d.la2-c1cs-fra.salesforceliveagent.com/chat',
 						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5E00000000gMUAQ_178c583c3fc',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "it_IT"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--dev1.my.salesforce.com',
+					'https://dev1-vwg5-vwgroup.cs84.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D5E000000DL4w',
+					'AudiIT',
+					{
+						baseLiveAgentContentURL: 'https://c.la2-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5725E0000004DGd',
+						buttonId: '5735E0000004DbP',
+						baseLiveAgentURL: 'https://d.la2-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I5E00000000nmUAA_17cb614edc9',
 						isOfflineSupportEnabled: false
 					}
 				);
