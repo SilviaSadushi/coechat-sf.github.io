@@ -33,11 +33,13 @@
 			<option value="">none</option>
 			<option value="dk_DK">Dansk</option>
 			<option value="de_DE">Deutsch</option>
+			<option value="de_AT">Deutsch(Austria)</option>
 			<option value="de_CH">Deutsch(Switzerland)</option>
 			<option value="it_CH">Italian(Switzerland)</option>
 			<option value="fr_CH">French(Switzerland)</option>
 			<option value="en_US">English</option>
 			<option value="en_IE">English(Ireland)</option>
+			<option value="it_IT">Italian</option>
 			<option value="pl_PL">Polski</option>
 			<option value="pt_BR">Português</option>
 			<option value="se_SE">Svensk</option>
@@ -51,6 +53,7 @@
 <script type='text/javascript'>
 	var languageCodes = new Map();
 	    languageCodes.set('en_US','English');
+	    languageCodes.set('de_AT','German');
 	    languageCodes.set('de_DE','German');
 	    languageCodes.set('de_CH','German');
 	    languageCodes.set('it_CH','Italian');
@@ -63,10 +66,12 @@
 	    languageCodes.set('fi_FI','Finnish');
 	    languageCodes.set('sv_FI','Swedish');	
 	    languageCodes.set('no_NO','Norwegian');
+	    languageCodes.set('it_IT','Italian');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
 	    marketCodes.set('de_DE','DE');
+	    marketCodes.set('de_AT','AT');	    
 	    marketCodes.set('de_CH','CH');
 	    marketCodes.set('it_CH','CH');
 	    marketCodes.set('fr_CH','CH');
@@ -78,10 +83,12 @@
 	    marketCodes.set('fi_FI','FI');
 	    marketCodes.set('sv_FI','FI');
 	    marketCodes.set('no_NO','NO');
+	    marketCodes.set('it_IT','IT');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
 	    chatlanguages.set('de_DE', 'de');
+	    chatlanguages.set('de_AT', 'de');
 	    chatlanguages.set('de_CH', 'de');
 	    chatlanguages.set('it_CH', 'it');
 	    chatlanguages.set('fr_CH', 'fr');
@@ -93,10 +100,12 @@
 	    chatlanguages.set('fi_FI', 'fi');
 	    chatlanguages.set('sv_FI', 'sv');
 	    chatlanguages.set('no_NO', 'no');
+	    chatlanguages.set('it_IT', 'it');
 	
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_DE', 'Agent Offline');
+	    disabledMinimizedTextMap.set('de_AT', 'Agent Offline');
 	    disabledMinimizedTextMap.set('de_CH', 'Agent Offline');
 	    disabledMinimizedTextMap.set('it_CH', 'Agent Offline');
 	    disabledMinimizedTextMap.set('fr_CH', 'Agent hors ligne');
@@ -108,10 +117,12 @@
 	    disabledMinimizedTextMap.set('fi_FI','Agentti offline-tilassa');
 	    disabledMinimizedTextMap.set('sv_FI','Agent Offline');
 	    disabledMinimizedTextMap.set('no_NO','Agent Offline');
+	    disabledMinimizedTextMap.set('it_IT','Agent Offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
 	    defaultMinimizedTextMap.set('de_DE', 'Chatten mit einem Experten');
+	    defaultMinimizedTextMap.set('de_AT', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('de_CH', 'Chatten mit einem Experten');
 	    defaultMinimizedTextMap.set('it_CH', 'Chatta con un esperto');
 	    defaultMinimizedTextMap.set('fr_CH', 'Chattez avec un expert');
@@ -123,10 +134,12 @@
 	    defaultMinimizedTextMap.set('fi_FI', 'Keskustele asiantuntijan kanssa');
 	    defaultMinimizedTextMap.set('sv_FI', 'Chatta med en expert');
 	    defaultMinimizedTextMap.set('no_NO', 'Chat med en ekspert');
+	    defaultMinimizedTextMap.set('it_IT', 'Chatta con un esperto');
 	
 	var loadingTextMap = new Map();
 	    loadingTextMap.set('en_US','Loading...');
 	    loadingTextMap.set('de_DE','Laden...');
+	    loadingTextMap.set('de_AT','Laden...');
 	    loadingTextMap.set('de_CH','Laden...');
 	    loadingTextMap.set('it_CH','Caricamento...');
 	    loadingTextMap.set('fr_CH','Chargement...');
@@ -138,6 +151,7 @@
 	    loadingTextMap.set('fi_FI','Ladataan...');
 	    loadingTextMap.set('sv_FI','Läser in...');
 	    loadingTextMap.set('no_NO','Laster inn...');
+	    loadingTextMap.set('it_IT','Caricamento...');
 	
 	var language;
 		
