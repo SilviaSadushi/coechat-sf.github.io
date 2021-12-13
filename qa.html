@@ -31,6 +31,8 @@
 		<label for="language">Please choose your language</label>
 		<select id="myLanguage" name="language" onchange="ChangeLanguage()">
 			<option value="">none</option>
+			<option value="fr_BE">French(Belgium)</option>
+			<option value="nl_BE">Dutch(Belgium)</option>
 			<option value="dk_DK">Dansk</option>
 			<option value="de_DE">Deutsch</option>
 			<option value="de_AT">Deutsch(Austria)</option>
@@ -67,6 +69,8 @@
 	    languageCodes.set('sv_FI','Swedish');	
 	    languageCodes.set('no_NO','Norwegian');
 	    languageCodes.set('it_IT','Italian');
+	    languageCodes.set('fr_BE','French');
+	    languageCodes.set('nl_BE','Dutch');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
@@ -84,6 +88,8 @@
 	    marketCodes.set('sv_FI','FI');
 	    marketCodes.set('no_NO','NO');
 	    marketCodes.set('it_IT','IT');
+	    marketCodes.set('fr_BE','BE');
+	    marketCodes.set('nl_BE','BE');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
@@ -101,6 +107,8 @@
 	    chatlanguages.set('sv_FI', 'sv');
 	    chatlanguages.set('no_NO', 'no');
 	    chatlanguages.set('it_IT', 'it');
+	    chatlanguages.set('fr_BE', 'fr');
+	    chatlanguages.set('nl_BE', 'nl_NL');
 	
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
@@ -118,6 +126,8 @@
 	    disabledMinimizedTextMap.set('sv_FI','Agent Offline');
 	    disabledMinimizedTextMap.set('no_NO','Agent Offline');
 	    disabledMinimizedTextMap.set('it_IT','Agent Offline');
+	    disabledMinimizedTextMap.set('fr_BE','Agent hors ligne');
+	    disabledMinimizedTextMap.set('nl_BE','Agent momenteel niet bereikbaar');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
@@ -135,6 +145,8 @@
 	    defaultMinimizedTextMap.set('sv_FI', 'Chatta med en expert');
 	    defaultMinimizedTextMap.set('no_NO', 'Chat med en ekspert');
 	    defaultMinimizedTextMap.set('it_IT', 'Chatta con un esperto');
+	    defaultMinimizedTextMap.set('fr_BE', 'Chat avec un expert');
+	    defaultMinimizedTextMap.set('nl_BE', 'Chat met een expert');
 	
 	
 	var loadingTextMap = new Map();
@@ -153,6 +165,8 @@
 	    loadingTextMap.set('sv_FI','Läser in...');
 	    loadingTextMap.set('no_NO','Laster inn...');
 	    loadingTextMap.set('it_IT','Caricamento...');
+	    loadingTextMap.set('fr_BE','Chargement en cours...');
+	    loadingTextMap.set('nl_BE','Aan het laden...');
 	
 	var language;
 		
@@ -463,6 +477,40 @@
 							baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
 							eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004Ch6EAE_17d470aecd6',
 							isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "fr_BE"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiBEfr',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004CxI',
+						buttonId: '5737a0000004Ee7',
+						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CiDEAU_17da4565205',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "nl_BE"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiBEnl',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004CxJ',
+						buttonId: '5737a0000004Ee2',
+						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CiEEAU_17da454d0b7',
+						isOfflineSupportEnabled: false
 					}
 				);
 			}
