@@ -47,7 +47,10 @@
 			<option value="se_SE">Svensk</option>
 			<option value="fi_FI">Finnish(Finland)</option>
 			<option value="sv_FI">Swedish(Finland)</option>
-			<option value="no_NO">Norwegian</option>		
+			<option value="no_NO">Norwegian</option>
+			<option value="de_LU">Deutsch(Luxembourg)</option>
+			<option value="fr_LU">French(Luxembourg)</option>
+			<option value="gr_GR">Greek</option>
 		</select>
 	</div>
 	 
@@ -71,6 +74,9 @@
 	    languageCodes.set('it_IT','Italian');
 	    languageCodes.set('fr_BE','French');
 	    languageCodes.set('nl_BE','Dutch');
+	    languageCodes.set('de_LU','German');
+	    languageCodes.set('fr_LU','French');
+	    languageCodes.set('gr_GR','Greek');
 	
 	var marketCodes = new Map();
 	    marketCodes.set('en_US','GB');
@@ -90,6 +96,9 @@
 	    marketCodes.set('it_IT','IT');
 	    marketCodes.set('fr_BE','BE');
 	    marketCodes.set('nl_BE','BE');
+	    marketCodes.set('de_LU','LU');
+	    marketCodes.set('fr_LU','LU');
+	    marketCodes.set('gr_GR','GR');
 	
 	var chatlanguages = new Map();
 	    chatlanguages.set('en_US', 'en_US');
@@ -109,6 +118,9 @@
 	    chatlanguages.set('it_IT', 'it');
 	    chatlanguages.set('fr_BE', 'fr');
 	    chatlanguages.set('nl_BE', 'nl_NL');
+	    chatlanguages.set('de_LU', 'de');
+	    chatlanguages.set('fr_LU', 'fr');
+	    chatlanguages.set('gr_GR', 'el');
 	
 	var disabledMinimizedTextMap = new Map();
 	    disabledMinimizedTextMap.set('en_US', 'Agent Offline');
@@ -127,7 +139,10 @@
 	    disabledMinimizedTextMap.set('no_NO','Agent Offline');
 	    disabledMinimizedTextMap.set('it_IT','Agent Offline');
 	    disabledMinimizedTextMap.set('fr_BE','Agent hors ligne');
-	    disabledMinimizedTextMap.set('nl_BE','Agent momenteel niet bereikbaar');
+	    disabledMinimizedTextMap.set('nl_BE','Agent momenteel niet bereikbaar');	    
+	    disabledMinimizedTextMap.set('de_LU', 'Agent Offline');
+	    disabledMinimizedTextMap.set('fr_LU', 'Agent hors ligne');
+	    disabledMinimizedTextMap.set('gr_GR', 'Εκπρόσωπος offline');
 	
 	var defaultMinimizedTextMap = new Map();
 	    defaultMinimizedTextMap.set('en_US', 'Chat with an Expert');
@@ -147,6 +162,9 @@
 	    defaultMinimizedTextMap.set('it_IT', 'Chatta con un esperto');
 	    defaultMinimizedTextMap.set('fr_BE', 'Chat avec un expert');
 	    defaultMinimizedTextMap.set('nl_BE', 'Chat met een expert');
+	    defaultMinimizedTextMap.set('de_LU', 'Chatten mit einem Experten');
+	    defaultMinimizedTextMap.set('fr_LU', 'Chattez avec un expert');
+	    defaultMinimizedTextMap.set('gr_GR', 'Συνομιλήστε με έναν εκπρόσωπο');
 	
 	
 	var loadingTextMap = new Map();
@@ -167,6 +185,9 @@
 	    loadingTextMap.set('it_IT','Caricamento...');
 	    loadingTextMap.set('fr_BE','Chargement en cours...');
 	    loadingTextMap.set('nl_BE','Aan het laden...');
+	    loadingTextMap.set('de_LU','Laden...');
+	    loadingTextMap.set('fr_LU','Chargement en cours');
+	    loadingTextMap.set('gr_GR','Γίνεται φόρτωση');
 	
 	var language;
 		
@@ -510,6 +531,57 @@
 						buttonId: '5737a0000004Ee2',
 						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
 						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CiEEAU_17da454d0b7',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "de_LU"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiLUde',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004D2T',
+						buttonId: '5737a0000004EfZ',
+						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CkKEAU_17e73a91694',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "fr_LU"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiLUfr',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004D2U',
+						buttonId: '5737a0000004Efj',
+						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CkLEAU_17e73abc042',
+						isOfflineSupportEnabled: false
+					}
+				);
+			}
+			if(this.language === "gr_GR"){
+				embedded_svc.init(
+					'https://vwg5-vwgroup--qa.my.salesforce.com',
+					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					gslbBaseURL,
+					'00D6E0000004Yt8',
+					'AudiGR',
+					{
+						baseLiveAgentContentURL: 'https://c.la3-c1cs-cdg.salesforceliveagent.com/content',
+						deploymentId: '5727a0000004D2S',
+						buttonId: '5737a0000004EfU',
+						baseLiveAgentURL: 'https://d.la3-c1cs-cdg.salesforceliveagent.com/chat',
+						eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04I7a0000004CkJEAU_17e73af5646',
 						isOfflineSupportEnabled: false
 					}
 				);
