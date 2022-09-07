@@ -418,8 +418,8 @@
 			}
 			if(this.language === "fi_FI"){
 				embedded_svc.init(
-					'https://vwg5-vwgroup--qa.my.salesforce.com',
-					'https://qa-vwg5-vwgroup.cs189.force.com/drcwholesale',
+					'https://vwg5-vwgroup--qa.sandbox.my.salesforce.com',
+					'https://vwg5-vwgroup--qa.sandbox.my.site.com/drcwholesale',
 					gslbBaseURL,
 					'00D6E0000004Yt8',
 					'AudiFIfi',
@@ -590,7 +590,7 @@
 
 		if (!window.embedded_svc) {
 			var s = document.createElement('script');
-			s.setAttribute('src', 'https://vwg5-vwgroup--qa.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+			s.setAttribute('src', 'https://vwg5-vwgroup--qa.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 			s.onload = function() {
 				initESW(null);
 			};
