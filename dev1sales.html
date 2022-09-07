@@ -121,8 +121,8 @@
 				}];
 			if(this.language === "fr_FR"){	
 				embedded_svc.init(
-					'https://vwg5-vwgroup--dev1.my.salesforce.com',
-					'https://dev1-vwg5-vwgroup.cs84.force.com/drcwholesale',
+					'https://vwg5-vwgroup--dev1.sandbox.my.salesforce.com',
+					'https://vwg5-vwgroup--dev1.sandbox.my.site.com/drcwholesale',
 					gslbBaseURL,
 					'00D5E000000DL4w',
 					'VTPOSSFrance',
@@ -138,8 +138,8 @@
 			}
 			if(this.language === "en_IE"){	
 				embedded_svc.init(
-					'https://vwg5-vwgroup--dev1.my.salesforce.com',
-					'https://dev1-vwg5-vwgroup.cs84.force.com/drcwholesale',
+					'https://vwg5-vwgroup--dev1.sandbox.my.salesforce.com',
+					'https://vwg5-vwgroup--dev1.sandbox.my.site.com/drcwholesale',
 					gslbBaseURL,
 					'00D5E000000DL4w',
 					'AudiIE',
@@ -159,7 +159,7 @@
 		
 		if (!window.embedded_svc) {
 			var s = document.createElement('script');
-			s.setAttribute('src', 'https://vwg5-vwgroup--dev1.my.salesforce.com/embeddedservice/5.0/esw.min.js');
+			s.setAttribute('src', 'https://vwg5-vwgroup--dev1.sandbox.my.salesforce.com/embeddedservice/5.0/esw.min.js');
 			s.onload = function() {
 			    initESW(null);
 			};
